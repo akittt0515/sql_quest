@@ -1,0 +1,50 @@
+{% extends 'sql_quest_app/layout.html' %}
+
+{% block title %}ステージ1{% endblock %}
+
+{% block body %}
+<body class="container">
+    <h1 class="display-4 text-primary">{{title}}</h1>
+    <p class="h5 mt-4">test</p>
+    <div class="w-50 p-3 float-sm-right">
+        <table class="table">
+            <tr>
+                <th>名前</th>
+                <th>レベル</th>
+                <th>職業</th>
+                <th>種族</th>
+                <th>転職回数</th>
+            </tr>
+        {% for item in data %}
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.Lv}}</td>
+                <td>{{item.job}}</td>
+                <td>{{item.tribe}}</td>
+                <td>{{item.job_change_count}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    <div class="w-50 p-3 float-sm-right">
+            <table class="table">
+                <tr>
+                    <th>名前</th>
+                    <th>レベル</th>
+                    <th>職業</th>
+                    <th>種族</th>
+                    <th>転職回数</th>
+                </tr>
+            {% for item in data %}
+                <tr>
+                    <td>{{item.name}}</td>
+                    <td>{{item.Lv}}</td>
+                    <td>{{item.job}}</td>
+                    <td>{{item.tribe}}</td>
+                    <td>{{item.job_change_count}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+</body>
+{% endblock %}

@@ -6,7 +6,7 @@ class std_data(models.Model):
     name=models.CharField(max_length=100)
     Lv=models.IntegerField(default=1)
     job=models.CharField(max_length=50)
-    gender=models.BooleanField
+    tribe=models.CharField(max_length=50)
     job_change_count=models.IntegerField(default=0)
 
 
