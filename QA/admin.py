@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import std_data
+from .models import QA
 
-admin.site.register(std_data)
+admin.site.register(QA)
 
 
 

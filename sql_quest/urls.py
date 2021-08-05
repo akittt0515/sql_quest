@@ -20,4 +20,5 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sql_quest_app/',include('sql_quest_app.urls')),
+    path('accounts/',include('accounts.urls')), 
 ]
