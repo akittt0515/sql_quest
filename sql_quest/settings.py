@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -22,6 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 STATIC_URL = '/static/'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -88,6 +90,7 @@ DATABASES = {
     }
 }
 
+DATABASE_ROUTERS = []
 
 
 # Password validation
@@ -130,7 +133,7 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'login' # ログインしていないときのリダイレクト先
 LOGIN_REDIRECT_URL = 'SQ_overview' # ログイン後のリダイレクト先
-LOGOUT_REDIRECT_URL = 'login' # 
+LOGOUT_REDIRECT_URL = 'login' # ログアウト後のリダイレクト先
 
 try:
     from .local_settings import *
