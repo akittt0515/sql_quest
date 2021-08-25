@@ -41,15 +41,17 @@
         </div>
         
         <section class="container bg-light mb-5">
-            <p class="ms-5 pt-5 h2">サインイン</p>
-            <p class="ms-5 pt-1">新規ユーザーの方<a href='{% url "create" %}' class="ms-3">アカウント作成</a></p>
             <div class="row">
-                <form class="col-6 m-5 mt-3" method="POST">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" class="btn btn-lg btn-dark mt-3">サインイン</button>
-                </form>
-                <img src="{% static " accounts/login_pc.jpg" %}" class="col-4 mb-5 img-thumbnail d-none d-md-block" alt="ログイン">
+                <div class="col">
+                    <p class="ms-5 pt-5 h2">サインイン</p>
+                    <p class="ms-5 pt-1">新規ユーザーの方<a href='{% url "create" %}' class="ms-3">アカウント作成</a></p>
+                    <form class="col m-5 mt-3" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-lg btn-dark mt-3">サインイン</button>
+                    </form>
+                </div>
+                    <img src="/media/login_pc.jpg" class="col-7 my-5 me-5 img-thumbnail d-none d-lg-block" alt="ログイン">
             </div>
         </section>
     </div>
