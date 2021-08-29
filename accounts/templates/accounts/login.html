@@ -17,21 +17,21 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><h1>SQL Quest</h1></a>
+                <a class="navbar-brand" href='{% url "SQ_overview" %}'><h1>SQL Quest</h1></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav mr-auto">
-                        <button type="button" class="btn btn-dark border-secondary text-white nav-link btn-md mx-2">トップページ</button>
-                        <button type="button" class="btn btn-light text-dark nav-link btn-md mx-2">ログアウト</button>
-                        <button type="button" class="btn btn-secondary nav-link btn-md mx-2">サインアップ</button>
+                        <button type="button" class="btn btn-dark border-secondary text-white nav-link btn-md mx-2"><a href='{% url "SQ_overview" %}' class="btn text-white">トップページ</a></button>
+                        <button type="button" class="btn btn-light text-dark nav-link btn-md mx-2"> <a href='{% url "logout" %}' class="btn text-black">ログアウト</a></button>
+                        <button type="button" class="btn btn-secondary nav-link btn-md mx-2"> <a href='{% url "create" %}' class="btn text-white">サインアップ</a></button>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-
+{% block body %}
     <div class="container pb-5">
         <div class="row mt-5 mb-3">
             <div class="text-center">                
@@ -55,6 +55,7 @@
             </div>
         </section>
     </div>
+{% endblock %}
         <footer class="mt-auto bg-dark text-white text-center fixed-bottom">
             <p>© 2021 SQL Quest</p>
         </footer>
