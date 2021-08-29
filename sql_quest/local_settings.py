@@ -2,7 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = '%a46pm3zq@dj9)h(hloxhsm0eo7%-dp)tids3w(mdc*7814x5q'
+SECRET_KEY = 'dk7)j=up6be3mtlcs#bkq$b)kuq$=)q4#a$9=x3sc-1tpy)t8f'
 
 DATABASES = {
     'default': {
