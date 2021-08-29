@@ -1,0 +1,29 @@
+{% extends 'accounts/login.html' %}
+    {% block body %}
+
+        <section class="container bg-light my-5">
+            <p class="ms-5 pt-5 h2">アカウントの作成</p>
+            <p class="ms-5 pt-1">アカウントをお持ちの方<a href='{% url "login" %}'  class="ms-3">サインイン</a></p>
+            <div class="row">
+                <form class="col-9 m-5 mt-3" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <!-- <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">名前</label>
+                        <input type="" class="form-control" id="exampleInputName" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Eメール</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">パスワード</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div> -->
+                    <button type="submit" class="btn btn-dark btn-lg mt-3">サインアップ</button>
+                </form>
+                <!-- <img src="img/board-1273128_640.jpg" class="col-3 mb-5 img-thumbnail d-none d-md-block justify-content-end" alt="ログイン"> -->
+            </div>
+        </section>
+    </div>
+    {% endblock %}
